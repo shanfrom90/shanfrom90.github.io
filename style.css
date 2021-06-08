@@ -1,0 +1,516 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom CSS properties */
+
+:root {
+    --ff-primary: 'Source Sans Pro';
+    --ff-secondary: 'Source Code Pro';
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --color-light: #fff;
+    --color-dark: #303030;
+    --color-accent: #16e0bd;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --box-shadow: 0.25em .25em .75em rgba(0,0,0,.25),
+        .125em .125em .25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.618rem;
+        --fs-body: 1.125rem;
+    
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--color-light);
+    color: var(--color-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: bold;
+}
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+    
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+    background: var(--color-accent);
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+    position: fixed;
+    background: var(--color-dark);
+    color: var(--color-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    color: var(--color-accent);
+}
+
+.nav_toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav-open .nav{
+    transform: translateX(0);
+}
+
+.nav-open .nav_toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger, .hamburger::before, .hamburger::after{
+    background: var(--color-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before {
+    top: 6px;
+}
+
+.hamburger::after {
+    bottom: 6px;
+}
+/* Intro Section Styling */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--box-shadow);
+}
+
+.section__subtitle--intro {
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--color-accent);
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        column-gap: 1em;
+        grid-template-areas: 
+         "img title"
+         "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img{
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section__subtitle--intro{
+        align-self: start; 
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/* Skills & Experience */
+
+.my-skills{
+    background-color: var(--color-dark);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--color-light);
+    text-align: center;
+}
+
+.section__title--skills {
+    color: var(--color-accent);
+    display: inline;
+     
+}
+
+.section__title--skills::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: .5em auto 1em;
+    background: var(--color-light);
+    opacity: .25;
+}
+
+.skills {
+    margin-bottom: 4em;
+    
+}
+
+.skill{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .skills {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .skill 
+    + .skill {
+        margin-left: 2em;
+    }
+}
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--box-shadow);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+        "title img"
+        "subtitle img"
+        "text img";
+        column-gap: 2em;
+    }
+    .section__title--about{
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -2em;
+        width: calc(100% + 4em);
+        padding-left: 2em;
+        padding-right: calc(200px + 4em);
+    }
+
+     
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+    }
+}
+
+/* Projects */
+
+.projects {
+    background: var(--color-dark);
+    color: var(--color-light);
+    text-align: center;
+}
+
+.section__subtitle--projects {
+    color: var(--color-accent);
+    text-align: center;
+    
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body);
+    
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+ 
+#myProjects{
+    margin: 2rem auto;
+    color: var(--color-dark);
+     
+
+}
+section{
+    margin: auto auto;
+    padding-top: 1em;
+    min-height: 18em;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background: var(--color-accent) ;
+    padding: 1em;
+    
+    opacity: 90%;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+#myProjects{
+    display: flex;
+    justify-content: center;
+
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 1em;
+    padding: 10px;
+     
+
+} 
+
+#myProjects article{
+
+    border: 1px --color-dark;
+    text-align: center;
+    margin: 5px;
+    padding:20px;
+    
+    
+}
+#myProjects article img{
+    width: 100%;
+    border: 1px solid var(--color-dark);
+    border-radius: 8px;
+}
+
+ 
+
+
+#myProjects article h3{
+    text-align: center;
+}
+
+#myProjects a:hover{
+    opacity: .70
+}
+
+section > p {
+    margin: 1em 0;
+}
+
+/* footer */
+
+footer {
+    background: var(--color-dark);
+    color: var(--color-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+}
+
+.socialLink{
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   margin: 2em 0 0;
+   padding: 0;
+}
+
+#icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+     
+}
+
+#icons a:hover{
+opacity: .5;
+}
+
+.socialLink--item {
+    margin: 0 .5em;
+}
+
+.socialLink--link {
+     
+    padding: .5em;
+}
+
+#contactInfo{
+    text-align: center;
+    font-size: var(--fs-h3);
+    background: var(--color-dark);
+    color: var(--color-light);
+    font-weight: var(--fw-bold);
+}
+
+ 
+
+ 
+ 
