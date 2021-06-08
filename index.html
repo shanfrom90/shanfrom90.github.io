@@ -6,29 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shannon Adams | Portfolio</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/374254d661.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="" </div>
-            <button class="nav_toggle">
-                <span>
+            <img src="">
+        </div>
+        <button class="nav_toggle">
+            <span class="hamburger">
 
-                </span>
+            </span>
 
-            </button>
-            <nav class="nav">
-                <ul>
-                    <li class="nav_item"><a href=#home class="nav_link">Home</a></li>
-                    <li class="nav_item"><a href=#skills class="nav_link">Skills & Experience</a></li>
-                    <li class="nav_item"><a href=#about class="nav_link">About Me</a></li>
-                    <li class="nav_item"><a href=#projects class="nav_link"> Projects</a></li>
-                    <li class="nav_item"><a href=#contact class="nav_link"> Get In Touch</a></li>
-                </ul>
-            </nav>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav_item"><a href=#home class="nav_link">Home</a></li>
+                <li class="nav_item"><a href=#skills class="nav_link">Experience</a></li>
+                <li class="nav_item"><a href=#about class="nav_link">About Me</a></li>
+                <li class="nav_item"><a href=#projects class="nav_link"> Projects</a></li>
+                <li class="nav_item"><a href=contact.html class="nav_link"> Get In Touch</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Intro -->
@@ -40,24 +49,31 @@
         <p class="section__subtitle section__subtitle--intro">
             Software Developer
         </p>
-        <img src="/images/me-tree.jpg" alt="shannon in the woods" />
+        <img class="intro__img" src="/images/me-tree.jpg" alt="shannon in the woods" />
     </section>
-    
-    <!-- Skills & Experience -->
+
+    <!-- Skills & Experience (What I do) -->
     <section class="my-skills" id="skills">
-        <h2 class="section__title section__title--skills">Skills & Experience</h2>
+        <h2 class="section__title section__title--skills">What I Do</h2>
         <div class="skills">
             <div class="skill">
                 <h3>Full Stack Development</h3>
-                <p></p>
+                <p>C# • .NET Core • ASP.net • JavaScript • Flexbox • MVC • HTML • CSS • Grid • TDD • Agile (Scrum) •
+                    Object Oriented Programming • AJAX • JSON • Restful APIs • Responsive Design / Mobile • Structured
+                    Query Language (SQL) • Relational Databases • GitHub</p>
             </div>
             <div class="skill">
                 <h3>Project Management</h3>
-                <p></p>
+                <p>I have been the lead on a number of different projects and events throughout my professional career
+                    and volunteer experience. Strategic thinking, analyzing, time management, and prioritization have
+                    been keys to my success in this area. </p>
             </div>
             <div class="skill">
-                <h3>Collaboration</h3>
-                <p></p>
+                <h3>Collaboration & Team Leadership</h3>
+                <p>I most enjoy working in supportive environemnts founded on inclusivity and mutual respect. In
+                    previous roles, I have served as a trainer, coach, interviewer, and technical expert where I use a
+                    combination of active listening, excellent communication, and goal setting to empower others to
+                    develop further skills or overcome challenges. </p>
             </div>
         </div>
         <a href="#projects" class="btn">My Projects</a>
@@ -65,57 +81,123 @@
     <!-- About Me -->
     <section class="about-me" id="about">
         <h2 class="section__title section__title--about">About Me</h2>
-        <p class="section__subtitle section__subtitle--about"></p>
+        <p class="section__subtitle section__subtitle--about">Software Developer</p>
 
         <div class="about-me__body">
-            <p></p>
-            <p></p>
+            <p>I recently completed We Can Code It's full stack bootcamp in April 2021. I decided to enter the field of
+                software development because I enjoy analyzing and solving problems, and working in a collaborative
+                environment to drive innovative solutions that improve our daily lives. </p>
+            <p> Professionally, I have extensive experience working for small businesses and nonprofits where I've
+                started out in entry level positions and advanced within organizations bringing my enthusiasm, attention
+                to detail, and positive attitude to my work. I'm excited to combine my skills, curiousity, and
+                commitment to grow as a developer. Long term, I am interested in mentoring opportunites for other folks
+                looking to enter this field. </p>
+            <p>In my free time, you can find me playing League of Legends with my younger sister Catie, hiking in the
+                Metroparks and CVNP, cooking up delicious vegetarian food, and keeping up with my adopted cat, Freddie.
+            </p>
 
         </div>
-        <img src="/images/me-cairn.JPG">
+        <img class="about-me__img" src="/images/me-cairn.JPG">
     </section>
 
     <!--Projects -->
 
     <section class="projects" id="projects">
-        <h2 class="section__title section__title--projects">Projects</h2>
-        <p class="section__subtitle"></p>
+        <h2>Projects</h2>
+        <p class="section__subtitle section__subtitle--projects">Planned, designed, and developed professionally
+            programmed applications in collaborative team-based and independent
+            settings during a 14 week award-winning technical boot camp.
 
-        <div class="portfolioItems">
-            <a href="#" class="portfolio__item">
-                <img src="" alt="" class="portfolio__image"
-            </a>
 
-            <a href="#" class="portfolio__item">
-                <img src="" alt="" class="portfolio__image"
-            </a>
+        <div id="myProjects">
+            <article class="card">
+                <h3>Jeopardy Practice</h3>
+                <img src="images/jeopardy-clipart-jeopardy-clipart-1.jpg">
+                <p class="blurb">Single page application built in Visual Studio Code. This solo project uses HTML, CSS,
+                    JavaScript along with API calls to the GIPHY API & jPractice API and JSON manipulation to allow
+                    users to generate a random Jeopardy GIF and practice Jeopardy questions.</p>
+                <button onclick="window.open('https://github.com/shanfrom90/JeopardyAPI' ,'_blank')">View on GitHub</button>
+            </article>
 
-            <a href="#" class="portfolio__item">
-                <img src="" alt="" class="portfolio__image"
-            </a>
+            <article class="card">
+                <h3>Stone Chasers Application</h3>
+                <img src="images/rock.jpg">
 
-            <a href="#" class="portfolio__item">
-                <img src="" alt="" class="portfolio__image"
-            </a>
+                <p>The Journable Blog application allows users to view and submit blog posts. This was an independent
+                    mastery project building an ASP.NET Core web application with CRUD operations utilizing MVC, ORM,
+                    HTML, and CSS. </p>
+                <button onclick="window.open('https://github.com/shanfrom90/StoneChasers')">View on GitHub</button>
 
-            <a href="#" class="portfolio__item">
-                <img src="" alt="" class="portfolio__image"
-            </a>
+            </article>
 
+            <article class="card">
+                <h3>Blog Site</h3>
+                <img src="images/journal.jpg">
+                <p>The Journable Blog application allows users to view and submit blog posts. This was an independent
+                    mastery project building an ASP.NET Core web application with CRUD operations utilizing MVC, ORM,
+                    HTML, and CSS. </p>
+                <button onclick="window.open('https://github.com/shanfrom90/BlogProject','_blank')">View on GitHub</button>
+            </article>
+
+            <article class="card">
+                <h3>Reviews Site</h3>
+                <img src="images/reviewsSite.jpg">
+                <p>The Musical Theatre Reviews Site allows you to view reviews for your favorite musicals! You can also
+                    submit your own review with a rating and comment, and add a Musical if it isn't listed, including an
+                    image. This was a group project building an ASP.NET Core web application with CRUD operations
+                    utilizing MVC, ORM, Scrum, and GitHub.</p>
+                <button onclick="window.open('https://github.com/shanfrom90/ReviewSite','_blank')">View on GitHub</button>
+            </article>
+
+            <article class="card">
+                <h3>Virtual Pet Shelter</h3>
+                <img src="images/Tamagotchi-Vector.jpg">
+                <p class="blurb">Virtual Pet Shelter gives you the ability to create and take care of virtual pets! You
+                    can chooese to create an Organic or Robotic Pet, monitor their stats as the game progresses, and
+                    interact with them. This project was a team project demonstrating OOP principles and TDD built as a
+                    console application in Visual Studio using C#.</p>
+                <button onclick="window.open('https://github.com/shanfrom90/VirtualPetShelter','_blank')">View on
+                    GitHub</button>
+            </article>
+
+            <article class="card">
+                <h3>Car Garage</h3>
+                <a href="" target="_blank">
+                    <img src="images/car.jpg"> </a>
+                <p id="Car-Garage"> In order to pass each of the ten tests in Car Garage, I followed best practices in
+                    test-driven development. This independent project was completed to demonstrate proficiency with TDD.
+                </p>
+                <button onclick="window.open('https://github.com/shanfrom90/Cars-Workshop','_blank')">View on GitHub</button>
+
+            </article>
         </div>
 
     </section>
 
     <footer>
 
-        
+        <p>&copy;2021 Shannon Adams</p>
         <ul class="socialLink">
-            <li class="socialLink--item"><a class="socialLink--link" href=""></a>LinkedIn</li>
-            <li class="socialLink--item"><a class="socialLink--link" href=""></a>GitHub</li>
-            <li class="socialLink--item"><a class="socialLink--link" href=""></a>Email</li>
+            <li class="socialLink--item">
+                <a class="socialLink--link" href="https://www.linkedin.com/in/sma1290/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="socialLink--item">
+                <a class="socialLink--link" href="https://github.com/shanfrom90" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="socialLink--item">
+                <a class="socialLink--link" href="mailto:shannonadams1290@gmail.com" target="_blank">
+                    <i class="fas fa-envelope-open-text"></i>
+                </a>
+            </li>
 
         </ul>
     </footer>
+
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
